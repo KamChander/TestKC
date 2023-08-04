@@ -1,7 +1,7 @@
 {% snapshot FactOrders %}
 
-    --{% set new_schema = target.schema + "_snapshot" %}
-    {% set new_schema = target.schema %}
+    {% set new_schema = target.schema + "_snapshot" %}
+
 
     {{
         config(
