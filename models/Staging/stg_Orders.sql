@@ -3,7 +3,9 @@ With Orders as(
         id as orderid,
         user_id as customerid,
         order_date,
-        status
+        status,
+        OrderCreatedDate,
+        OrderUpdatedDate
     From {{ source('jaffle_shop','orders')}}
 )
 Select * from Orders
