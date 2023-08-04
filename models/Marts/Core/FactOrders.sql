@@ -14,9 +14,9 @@ FactOrders as (
         o.orderid,
         p.paymentid,
         o.status,
-        p.amount
-        --o.OrderCreatedDate
-        --o.OrderUpdatedDate
+        p.amount,
+        o.OrderCreatedDate,
+        o.OrderUpdatedDate
     From orders as o
     Left Join payments p on o.orderid=p.orderid 
 
