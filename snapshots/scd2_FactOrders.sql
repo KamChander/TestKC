@@ -2,7 +2,6 @@
 
     {% set new_schema = target.schema + "_snapshot" %}
 
-
     {{
         config(
             target_database="Analytics",
