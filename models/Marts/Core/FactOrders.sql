@@ -1,6 +1,6 @@
 With orders as (
 
-    Select * from {{ ref('stg_Orders')}}
+    Select *  from {{ ref('stg_Orders')}}
 ),
 
 payments as (
