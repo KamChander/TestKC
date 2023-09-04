@@ -38,5 +38,11 @@ models:
             +materialized: table
         Staging:
             +materialized: view
+# This below piece of configuration is added to generate table structure int he docs.
+            +persist_docs:
+              relation: true
+              columns: true
    
-    
+
+
+
