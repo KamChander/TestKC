@@ -4,3 +4,25 @@ sources:
     schema: stripe
     tables:
       - name: payment
+        description: Table to store payment data from the Stripe source in the raw schema.
+        columns:
+          - name: id
+            description: A unique identifier for each payment.
+            tests:
+              - unique
+          - name: orderid
+            description: The ID of the order associated with the payment.
+            tests:
+              - not_null
+          - name: paymentmethod
+            description: The payment method used for the transaction.
+          - name: status
+            description: '{{ doc("payment_status") }}'
+          - name: amount
+            description: The payment amount.
+          - name: created
+            description: The date when the payment was created.
+            tests:
+              - not_null
+          - name: batched_at
+            description: The timestamp when the payment was batched (defaulting to current timestamp).

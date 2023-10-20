@@ -1,13 +1,14 @@
-With payments as (
+With payments As (
 
-    Select 
-        id as paymentid,
+    Select
+        id As paymentid,
         orderid,
         paymentmethod,
         status,
         amount,
         created
-    From {{ source('stripe','payment')}}
+    From {{ source('stripe','payment') }}
 
 )
-Select * from payments
+
+Select * From payments
